@@ -2,6 +2,10 @@
 
 https://trpc.io/docs/getting-started
 
+https://tanstack.com/router/v1/docs/framework/react/quick-start
+
+https://tanstack.com/router/v1/docs/framework/react/examples/with-trpc-react-query
+
 Call PRC defined on backend, end to end type safety
 
 create client/src/trpc.ts

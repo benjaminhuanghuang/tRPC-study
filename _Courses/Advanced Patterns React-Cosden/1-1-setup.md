@@ -1,12 +1,26 @@
 # Setup Monorepo project
 
-pnpm-workspace.yaml
+Create pnpm-workspace.yaml
 
 ```sh
 pnpm install
 ```
 
-## Frontend
+## Frontend setup: tailwind, shadcn
+
+```sh
+npm create vite@latest
+
+```
+
+Setup dependency
+
+```json
+ "dependencies": {
+    "@advanced-react/server": "workspace:*",
+    "@advanced-react/shared": "workspace:*",
+ }
+```
 
 ## Backend
 

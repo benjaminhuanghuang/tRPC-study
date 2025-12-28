@@ -155,7 +155,7 @@ importers:
         specifier: ^1.83.0
         version: 1.142.6(@tanstack/react-router@1.142.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(@tanstack/router-core@1.142.6)(csstype@3.2.3)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(solid-js@1.9.10)
       '@tanstack/router-plugin':
-        specifier: ^1.83.0
+        specifier: ^1.142.6
         version: 1.142.6(@tanstack/react-router@1.142.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(vite@7.3.0(@types/node@22.19.3)(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.21.0))
       '@types/leaflet':
         specifier: ^1.9.16

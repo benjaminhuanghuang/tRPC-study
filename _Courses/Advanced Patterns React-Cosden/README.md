@@ -14,7 +14,7 @@ code: https://pan.baidu.com/s/1l1Hp5FaLrI-20-Yy3xvvGA?pwd=1234
 
 pnpm monorepo workspace
 
-Frontend: React 19 + Tailwind CSS + Shadcn + tanstack React query + tRPC
+Frontend: React19 + Tailwind CSS + Shadcn + Tanstack React query + tRPC + Tanstack Router
 
 Backend: Express + tRPC + drizzle + sqlite
 
