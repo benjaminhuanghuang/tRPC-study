@@ -27,3 +27,5 @@ Use the router
 ```js
 const utils = trpc.useUtils();
 ```
+
+Update client/src/features/shared/components/Navbar.tsx

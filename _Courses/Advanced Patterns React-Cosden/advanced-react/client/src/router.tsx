@@ -7,6 +7,7 @@ import {
   httpBatchLink,
 } from "@trpc/react-query";
 
+import Spinner from "./features/shared/components/ui/Spinner";
 import { env } from "./lib/utils/env";
 import { routeTree } from "./routeTree.gen";
 
@@ -35,7 +36,12 @@ function createRouter() {
     context: {
       trpcQueryUtils,
     },
-    Wrap: function WrapComponent({ children }: { children: React.ReactNode }) {
+    defaultPendingComponent: () => (
+      <div className="flex items-center justify-center">
+        <Spinner />
+      </div>
+    ),
+    Wrap: function WrapComponent({ children }) {
       return (
         <trpc.Provider client={trpcClient} queryClient={queryClient}>
           <QueryClientProvider client={queryClient}>
