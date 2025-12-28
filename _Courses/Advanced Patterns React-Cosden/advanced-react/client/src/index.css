@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-500: #faf5cf;
+  --color-secondary-500: #a37d54;
+  --max-w-feed: 600px;
+}
