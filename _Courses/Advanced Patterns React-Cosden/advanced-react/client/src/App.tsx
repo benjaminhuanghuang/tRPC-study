@@ -1,3 +1,6 @@
+/*
+Deleted App.tsx - the component was moved to routes/index.tsx
+*/
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { httpBatchLink } from "@trpc/react-query";
 import { useState } from "react";
