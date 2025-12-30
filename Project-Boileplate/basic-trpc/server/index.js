@@ -11,8 +11,9 @@ const appRouter = tRPC.router({
 
   createUser: tRPC.procedure
     .input((input) => input)
-    .mutation(({ input }) => {
-      return { id: Date.now(), name: input.name };
+    .mutation((opt) => {
+      console.log("Creating user:", opt);
+      return { id: Date.now(), name: opt.input.name };
     }),
 });
 
