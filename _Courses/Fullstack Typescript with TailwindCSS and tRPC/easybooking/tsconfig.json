@@ -4,6 +4,7 @@
     "baseUrl": "./packages",
     "paths": {
       "@easybooking/schema": ["packages/schema"]
-    }
+    },
+    "types": ["node"]
   }
 }

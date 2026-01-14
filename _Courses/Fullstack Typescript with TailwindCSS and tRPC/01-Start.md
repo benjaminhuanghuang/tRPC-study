@@ -76,5 +76,7 @@ npm i knex pg
 Create knexfile.js
 
 ```sh
+npx knex migrate:make init
+
 npx knex migrate:latest
 ```
