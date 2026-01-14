@@ -44,3 +44,9 @@ npm i -D prettier
 
 npm i eslint eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
+
+package.json
+
+```json
+ "lint": " eslint .  -f visualstudio --report-unused-disable-directives --ext .ts, .tsx"
+```
