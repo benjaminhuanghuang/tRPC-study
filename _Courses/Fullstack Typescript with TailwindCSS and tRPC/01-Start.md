@@ -71,6 +71,8 @@ docker run --name easybooking_db -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=ea
 cd packages/schema
 
 npm i knex pg
+
+npm i -D kanel kanel-knex
 ```
 
 Create knexfile.js
@@ -79,4 +81,14 @@ Create knexfile.js
 npx knex migrate:make init
 
 npx knex migrate:latest
+
+npx kanel
+```
+
+## Backend
+
+```sh
+npm i koa koa-bodyparser @koa/router koa-helmet koa-logger
+
+npm i -D typescript tsx @types/node @types/koa @types/koa__router @types/koa-logger
 ```
