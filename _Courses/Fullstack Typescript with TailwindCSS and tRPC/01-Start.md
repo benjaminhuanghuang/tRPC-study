@@ -50,3 +50,31 @@ package.json
 ```json
  "lint": " eslint .  -f visualstudio --report-unused-disable-directives --ext .ts, .tsx"
 ```
+
+## Frontend
+
+## Tailwind
+
+https://tailwindcss.com/docs/installation/using-vite
+
+```sh
+npm install tailwindcss @tailwindcss/vite
+```
+
+## DB
+
+```sh
+docker run --name easybooking_db -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=easybooking -p 5432:5432 -d postgres
+```
+
+```sh
+cd packages/schema
+
+npm i knex pg
+```
+
+Create knexfile.js
+
+```sh
+npx knex migrate:latest
+```
