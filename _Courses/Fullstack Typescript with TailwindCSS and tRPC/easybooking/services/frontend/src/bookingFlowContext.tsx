@@ -4,6 +4,7 @@ export type BookingFlowState = {
   serviceTypeId?: number;
   description?: string;
   time?: Date;
+  email?: string;
 };
 
 type BookingFlowContext = {

@@ -3,10 +3,16 @@ import { useBookingFlow } from './bookingFlowContext';
 import clsx from 'clsx';
 import ChooseTypePage from './ChooseTypePage';
 import ChooseDatePage from './ChooseDatePage';
+import EnterEmailPage from './EnterEmailPage';
 
-const EnterEmailPage: FC = () => <div>Enter email</div>;
+const ThankYouPage: FC = () => (
+  <div>
+    <h1 className="text-2xl font-bold">Thank you for your booking!</h1>
+    <p className="mt-4">We have sent you a confirmation email.</p>
+  </div>
+);
 
-const flow = [ChooseTypePage, ChooseDatePage, EnterEmailPage];
+const flow = [ChooseTypePage, ChooseDatePage, EnterEmailPage, ThankYouPage];
 
 const NewBooking: FC = () => {
   const { page, activePageIndex, setActivePageIndex } = useBookingFlow(flow);

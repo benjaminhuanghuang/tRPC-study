@@ -13,7 +13,7 @@ const createServiceTypeInput = z.object({
 
 const getAvailabilityInput = z.object({
   startDate: z.date(),
-  numerOfDays: z.number(),
+  numberOfDays: z.number(),
 });
 const getAvailabilityOutput = z.array(slot);
 
@@ -41,7 +41,7 @@ const appRouter = router({
     .input(getAvailabilityInput)
     .output(getAvailabilityOutput)
     .query(async ({ ctx, input }) => {
-      const endDate = add(input.startDate, { days: input.numerOfDays });
+      const endDate = add(input.startDate, { days: input.numberOfDays });
       const res = await getBookedSlots(ctx.trx, input.startDate, endDate);
       return res;
     }),
