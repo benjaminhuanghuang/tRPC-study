@@ -1,4 +1,4 @@
-const { knexTypeFilter } = require('kanel-knex');
+const { knexTypeFilter, generateKnexTablesModule } = require('kanel-knex');
 const { generateIndexFile } = require('kanel');
 
 const knexConfig = require('./knexfile');
