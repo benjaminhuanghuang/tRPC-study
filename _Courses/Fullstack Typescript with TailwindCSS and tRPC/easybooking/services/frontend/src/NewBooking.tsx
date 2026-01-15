@@ -2,8 +2,8 @@ import { type FC } from 'react';
 import { useBookingFlow } from './bookingFlowContext';
 import clsx from 'clsx';
 import ChooseTypePage from './ChooseTypePage';
+import ChooseDatePage from './ChooseDatePage';
 
-const ChooseDatePage: FC = () => <div>Choose date</div>;
 const EnterEmailPage: FC = () => <div>Enter email</div>;
 
 const flow = [ChooseTypePage, ChooseDatePage, EnterEmailPage];

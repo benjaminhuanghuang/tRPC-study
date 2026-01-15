@@ -2,6 +2,7 @@ import type { FC } from 'react';
 import { useContext } from 'react';
 
 import bookingFlowContext from './bookingFlowContext';
+import { PrimaryButton } from './buttons';
 
 const ChooseTypePage: FC = () => {
   const { onProceed, state, updateState } = useContext(bookingFlowContext);
@@ -52,12 +53,7 @@ const ChooseTypePage: FC = () => {
         </ul>
       </div>
       <div className="mt-4 flex flex-row justify-end">
-        <button
-          className="bg-indigo-600 text-white px-4 py-2 rounded"
-          onClick={onProceed}
-        >
-          Choose Time
-        </button>
+        <PrimaryButton onClick={onProceed}>Choose Time</PrimaryButton>
       </div>
     </div>
   );
