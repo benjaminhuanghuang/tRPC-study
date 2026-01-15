@@ -8,7 +8,7 @@ interface DayProps {
   isLoading: boolean;
   available: boolean;
   onSelect: (date: Date) => void;
-  isSelected: boolean;
+  isSelected?: boolean;
 }
 
 const Day: FC<DayProps> = ({
@@ -50,7 +50,7 @@ interface CalendarProps {
   month: Date;
   availableDayMap?: { [key: string]: boolean };
   onSelectDay: (day: Date) => void;
-  selectedDay: Date;
+  selectedDay?: Date;
   onGoToPreviousMonth?: () => void;
   onGoToNextMonth?: () => void;
 }
