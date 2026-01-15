@@ -1,6 +1,9 @@
 import { type FC, createContext, useMemo, useState, type JSX } from 'react';
 
-export type BookingFlowState = {};
+export type BookingFlowState = {
+  serviceTypeId?: number;
+  description?: string;
+};
 
 type BookingFlowContext = {
   onGoBack: () => void;
