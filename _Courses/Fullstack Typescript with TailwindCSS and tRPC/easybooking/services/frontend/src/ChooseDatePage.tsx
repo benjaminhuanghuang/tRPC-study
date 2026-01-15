@@ -1,4 +1,4 @@
-import { addMonths, startOfMonth } from 'date-fns';
+import { addMonths, startOfDay, startOfMonth } from 'date-fns';
 import { type FC, useContext, useState } from 'react';
 
 import { PrimaryButton, SecondaryButton } from './buttons';
@@ -10,10 +10,19 @@ import OneMonth from './OneMonth';
 // );
 
 const ChooseDatePage: FC = () => {
-  const { onGoBack, onProceed } = useContext(bookingFlowContext);
+  const { onGoBack, onProceed, state, updateState } =
+    useContext(bookingFlowContext);
   const [thisMonth, setThisMonth] = useState(startOfMonth(new Date()));
+  const [selectedDay, setSelectedDay] = useState<Date | undefined>(
+    state.time && startOfDay(state.time),
+  );
+
+  const selectDay = (day: Date) => {
+    setSelectedDay(day);
+    updateState({ time: undefined });
+  };
+
   const nextMonth = addMonths(thisMonth, 1);
-  const [selectedDay, setSelectedDay] = useState<Date | undefined>();
 
   const goToPreviousMonth = () => setThisMonth(addMonths(thisMonth, -1));
   const goToNextMonth = () => setThisMonth(addMonths(thisMonth, 1));

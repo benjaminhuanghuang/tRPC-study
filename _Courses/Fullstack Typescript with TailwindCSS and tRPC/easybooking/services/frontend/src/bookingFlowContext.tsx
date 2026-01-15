@@ -3,6 +3,7 @@ import { type FC, createContext, useMemo, useState, type JSX } from 'react';
 export type BookingFlowState = {
   serviceTypeId?: number;
   description?: string;
+  time?: Date;
 };
 
 type BookingFlowContext = {
