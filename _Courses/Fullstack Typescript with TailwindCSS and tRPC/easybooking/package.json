@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": " eslint .  -f visualstudio --report-unused-disable-directives --ext .ts, .tsx"
+    "lint": " eslint .  -f visualstudio --report-unused-disable-directives --ext .ts, .tsx",
+    "dev-backend": "npm run --prefix ./services/backend dev",
+    "dev-frontend": "npm run --prefix ./services/frontend dev",
+    "dev": "npm run dev-backend & npm run dev-frontend --clearScreen false",
+    "devv": "tmux new-session -d -s easybooking 'npm run dev-backend' \\; split-window -v 'npm run dev-frontend' \\; attach-session -t easybooking",
+    "devh": "tmux new-session -d -s easybooking 'npm run dev-backend' \\; split-window -h 'npm run dev-frontend' \\; attach-session -t easybooking"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,7 @@
+{
+  "dev-backend": "npm run --prefix ./services/backend dev",
+  "dev-frontend": "npm run --prefix ./services/frontend dev",
+  "dev": "npm run dev-backend & npm run dev-frontend --clearScreen false",
+  "devv": "tmux new-session -d -s <session-name> 'npm run dev-backend' \\; split-window -v 'npm run dev-frontend' \\; attach-session -t <session-name>",
+  "devh": "tmux new-session -d -s <session-name> 'npm run dev-backend' \\; split-window -h 'npm run dev-frontend' \\; attach-session -t <session-name>"
+}

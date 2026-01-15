@@ -1,4 +1,4 @@
-# Endpoints
+# React setup
 
 backend
 
