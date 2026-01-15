@@ -1,13 +1,8 @@
 import { publicProcedure, router } from './trpc';
 import { z } from 'zod';
+import { serviceType } from '@easybooking/schema/dist/models/public/serviceType';
 
-const getServiceTypesOutput = z.array(
-  z.object({
-    id: z.number().optional(),
-    name: z.string().optional(),
-    description: z.string().optional(),
-  }),
-);
+const getServiceTypesOutput = z.array(serviceType);
 
 const appRouter = router({
   ping: publicProcedure.output(String).query(() => 'pong'),

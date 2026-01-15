@@ -18,3 +18,10 @@ npm i @trpc/server @trpc/client @trpc/react-query @tanstack/react-query
 cd backend
 npm i knex pg
 ```
+
+## Generating Zod Schemas
+
+```sh
+cd schema
+npm i -D kanel-zod
+```

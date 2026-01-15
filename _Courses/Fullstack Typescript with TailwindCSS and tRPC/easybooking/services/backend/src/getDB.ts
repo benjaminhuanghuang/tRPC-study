@@ -21,4 +21,8 @@ const getDb = (): Knex => {
   return _db;
 };
 
+export const attachDb = (db: Knex): void => {
+  _db = db;
+};
+
 export default getDb;
